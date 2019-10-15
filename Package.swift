@@ -1,16 +1,16 @@
-// swift-tools-version:4.0
+// swift-tools-version:4.2
 
 import PackageDescription
 
 let package = Package(
-  name: "SwiftAWSEc2",
+  name: "EC2",
   products: [
-      .library(name: "SwiftAWSEc2", targets: ["SwiftAWSEc2"]),
+      .library(name: "EC2", targets: ["EC2"]),
   ],
   dependencies: [
-      .package(url: "https://github.com/noppoMan/aws-sdk-swift-core.git", .upToNextMajor(from: "1.0.0"))
+      .package(url: "https://github.com/swift-aws/aws-sdk-swift-core.git", .upToNextMinor(from: "3.4.0"))
   ],
   targets: [
-      .target(name: "SwiftAWSEc2", dependencies: ["AWSSDKSwiftCore"]),
+      .target(name: "EC2", dependencies: ["AWSSDKSwiftCore"]),
   ]
 )
