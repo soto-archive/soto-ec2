@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "EC2", targets: ["EC2"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-aws/aws-sdk-swift-core.git", .upToNextMinor(from: "4.6.0"))
+        .package(url: "https://github.com/soto-project/soto-core.git", .upToNextMinor(from: "4.7.0"))
     ],
     targets: [
         .target(name: "EC2", dependencies: ["AWSSDKSwiftCore"], path: "./Sources/EC2"),
